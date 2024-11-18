@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+    <form method="post" action="/ejercicio2">
+        <label for="first_name">Primer Nombre</label>
+        <input type="text" name="first_name" required>
+        <label for="second_name">Segundo Nombre</label>
+        <input type="text" name="second_name" required>
+        <label for="third_name">Tercer Nombre</label>
+        <input type="text" name="third_name" required>
+        <input type="submit" value="Enviar">
+    </form>
+    {% if longest_name %}
+    <div id="resultado">
+        <p>el nombre mas largo es {{ longest_name }}</p>
+        <p>el nombre tiene {{ longest_name_char }} caracteres</p>
+    </div>
+    {% endif %}
+    <a href="/" class="button-back">Volver al Inicio</a>
+    </div>
+</body>
+</html>
